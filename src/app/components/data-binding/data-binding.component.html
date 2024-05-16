@@ -1,0 +1,19 @@
+<div>
+  <h2>Event Binding</h2>
+  <button (click)="showAlert()">Button</button>
+
+</div>
+
+<div>
+  <h2>One way data binding</h2>
+  <input type="text" [(ngModel)]="text">
+
+</div>
+
+<div>
+  <h2>Two way data binding</h2>
+  <span>{{textTwo}}</span>
+  <p></p>
+  <input type="text" [(ngModel)]="textTwo">
+
+</div>
