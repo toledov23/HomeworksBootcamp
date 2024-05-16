@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServiceModuleTestService } from '../../services/service-module-test.service';
 
 @Component({
   selector: 'app-my-first-component',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './my-first-component.component.scss'
 })
 export class MyFirstComponentComponent {
-
+  constructor(public serviceText: ServiceModuleTestService) { }
 }
