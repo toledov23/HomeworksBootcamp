@@ -1,0 +1,23 @@
+<div>
+  <p>NgFor</p>
+  <div *ngFor="let item of array">{{ item }}</div>
+
+</div>
+
+<div>
+  <p>NgIf</p>
+  <div *ngFor="let item of array">
+    <div *ngIf="item !== 'B'">{{ item }}</div>
+  </div>
+</div>
+
+<div>
+  <p>NgSwitch</p>
+  <div *ngFor="let item of array">
+    <div [ngSwitch]="item">
+      <div *ngSwitchCase="'A'">1</div>
+      <div *ngSwitchCase="'B'">2</div>
+      <div *ngSwitchCase="'C'">3</div>
+    </div>
+  </div>
+</div>
