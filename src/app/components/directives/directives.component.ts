@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './directives.component.scss'
 })
 export class DirectivesComponent {
-  array: string[] = ['A', 'B', 'C']
+  letters: string[] = ['A', 'B', 'C']
 }
