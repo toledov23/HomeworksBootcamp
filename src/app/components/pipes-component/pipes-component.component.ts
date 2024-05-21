@@ -10,7 +10,7 @@ import { CurrencyPipe } from '@angular/common';
   styleUrl: './pipes-component.component.scss'
 })
 export class PipesComponentComponent {
-  numValue: number = 185.33;
-  stringValue: string = 'Capitalized text'
+  price: number = 185.33;
+  description: string = 'Capitalized text'
 
 }
