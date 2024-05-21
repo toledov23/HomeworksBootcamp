@@ -5,6 +5,4 @@ import { Injectable } from '@angular/core';
 })
 export class ServiceTestService {
   persistentData: string = 'I’m a variable inside a singleton.'
-
-  constructor() { }
 }

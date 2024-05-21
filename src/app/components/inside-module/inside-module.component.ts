@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ServiceTestService } from '../../services/service-test.service';
 
 @Component({
@@ -8,6 +8,11 @@ import { ServiceTestService } from '../../services/service-test.service';
   templateUrl: './inside-module.component.html',
   styleUrl: './inside-module.component.scss'
 })
-export class InsideModuleComponent {
+export class InsideModuleComponent implements OnInit {
+  textFromService: string = ''
   constructor(public myService: ServiceTestService) { }
+
+  ngOnInit() {
+    this.textFromService = this.myService.persistentData
+  }
 }
