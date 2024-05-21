@@ -1,7 +1,7 @@
 import { Directive, ElementRef, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[appCapitalize]',
+  selector: '[capitalize]',
   standalone: true
 })
 export class CapitalizeDirective {
