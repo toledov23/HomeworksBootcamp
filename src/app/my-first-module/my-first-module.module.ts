@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { MyFirstComponentComponent } from '../components/my-first-component/my-first-component.component';
+import { MyFirstComponent } from '../components/my-first-component/my-first-component.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: MyFirstComponentComponent
+    component: MyFirstComponent
   }
 ];
 
@@ -16,11 +16,11 @@ const routes: Routes = [
   declarations: [],
   imports: [
     CommonModule,
-    MyFirstComponentComponent,
+    MyFirstComponent,
     RouterModule.forChild(routes)
   ],
   exports: [
-    MyFirstComponentComponent
+    MyFirstComponent
   ]
 })
-export class MyFirstModuleModule { }
+export class MyFirstModule { }
