@@ -12,7 +12,7 @@ import { DialogComponent } from '../dialog/dialog.component';
   templateUrl: './material.component.html',
   styleUrl: './material.component.scss'
 })
-export class MaterialComponent {
+export class MaterialDialogComponent {
   name: string = '';
   constructor(private dialog: MatDialog) {}
 
