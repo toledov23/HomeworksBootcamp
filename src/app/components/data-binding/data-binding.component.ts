@@ -9,7 +9,7 @@ import { FormsModule} from '@angular/forms';
   styleUrl: './data-binding.component.scss'
 })
 export class DataBindingComponent {
-  array: string[] = ['A', 'B', 'C']
+  letters: string[] = ['A', 'B', 'C']
   text: string = "Hello World";
   textTwo: string = "Hello World";
 
