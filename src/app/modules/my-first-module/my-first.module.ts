@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { MyFirstComponent } from '../components/my-first-component/my-first-component.component';
+import { MyFirstComponent } from '../../components/my-first-component/my-first.component';
 
-const routes: Routes = [
+export const my_routes: Routes = [
   {
     path: '',
     component: MyFirstComponent
@@ -13,13 +13,15 @@ const routes: Routes = [
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    MyFirstComponent
+  ],
   imports: [
     CommonModule,
-    MyFirstComponent,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(my_routes)
   ],
   exports: [
+    RouterModule,
     MyFirstComponent
   ]
 })
