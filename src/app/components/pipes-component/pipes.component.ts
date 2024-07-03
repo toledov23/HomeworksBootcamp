@@ -6,10 +6,10 @@ import { CurrencyPipe } from '@angular/common';
   selector: 'app-pipes-component',
   standalone: true,
   imports: [CapitalizePipe, CurrencyPipe],
-  templateUrl: './pipes-component.component.html',
-  styleUrl: './pipes-component.component.scss'
+  templateUrl: './pipes.component.html',
+  styleUrl: './pipes.component.scss'
 })
-export class PipesComponentComponent {
+export class PipesComponent {
   price: number = 185.33;
   description: string = 'Capitalized text'
 

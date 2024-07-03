@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { PipesComponentComponent } from './components/pipes-component/pipes-component.component';
+import { PipesComponentComponent } from './components/pipes-component/pipes.component';
 
 @Component({
   selector: 'app-root',
