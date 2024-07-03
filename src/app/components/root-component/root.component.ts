@@ -5,10 +5,10 @@ import { ServiceTestService } from '../../services/service-test.service';
   selector: 'app-root-component',
   standalone: true,
   imports: [],
-  templateUrl: './root-component.component.html',
-  styleUrl: './root-component.component.scss'
+  templateUrl: './root.component.html',
+  styleUrl: './root.component.scss'
 })
-export class RootComponentComponent implements OnInit {
+export class RootComponent implements OnInit {
   textFromService: string = ''
 
   constructor(public myService: ServiceTestService) { }

@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
-import { MyFirstModuleModule } from '../my-first-module/my-first-module.module';
+import { MyFirstModule } from '../my-first-module/my-first.module';
 
 @Injectable({
-  providedIn: MyFirstModuleModule
+  providedIn: MyFirstModule
 })
 export class ServiceModuleTestService {
   textFromServiceTest: string = 'Text From Service Working'
-
-  constructor() { }
 }

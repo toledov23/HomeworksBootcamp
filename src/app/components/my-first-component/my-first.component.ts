@@ -3,11 +3,14 @@ import { ServiceModuleTestService } from '../../services/service-module-test.ser
 
 @Component({
   selector: 'app-my-first-component',
-  standalone: true,
-  imports: [],
-  templateUrl: './my-first-component.component.html',
-  styleUrl: './my-first-component.component.scss'
+  templateUrl: './my-first.component.html',
+  styleUrl: './my-first.component.scss'
 })
-export class MyFirstComponentComponent {
+export class MyFirstComponent {
+  textFromService: string = ''
   constructor(public serviceText: ServiceModuleTestService) { }
+
+  ngOnInit() {
+    this.textFromService = this.serviceText.textFromServiceTest
+  }
 }
