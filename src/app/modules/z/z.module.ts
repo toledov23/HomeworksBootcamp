@@ -7,11 +7,13 @@ import { Z3Component } from '../../components/z3/z3.component';
 
 
 @NgModule({
-  imports: [
-    CommonModule,
+  declarations: [
     Z1Component,
     Z2Component,
     Z3Component
+  ],
+  imports: [
+    CommonModule,
   ],
   exports: [
     Z1Component,
