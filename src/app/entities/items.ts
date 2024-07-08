@@ -6,7 +6,8 @@ export const items: Item[] = [
     title: 'Marco para fotos',
     prices: { '20x20': 15.00, '20x30': 18.45 },
     photos: ['https://api.slingacademy.com/public/sample-photos/1.jpeg', 'https://api.slingacademy.com/public/sample-photos/2.jpeg'],
-    description: 'Un bonito marco para fotos.'
+    description: 'Un bonito marco para fotos.',
+    offerDiscount: 10,
   },
   {
     id: '2',
@@ -20,7 +21,8 @@ export const items: Item[] = [
     title: 'Lámpara de mesa',
     prices: { 'led': 25.00, 'incandescent': 20.00 },
     photos: ['https://api.slingacademy.com/public/sample-photos/5.jpeg', 'https://api.slingacademy.com/public/sample-photos/6.jpeg'],
-    description: 'Lámpara de mesa moderna y elegante.'
+    description: 'Lámpara de mesa moderna y elegante.',
+    offerDiscount: 10,
   },
   {
     id: '4',
@@ -41,14 +43,16 @@ export const items: Item[] = [
     title: 'Alfombra',
     prices: { 'small': 45.00, 'large': 75.00 },
     photos: ['https://api.slingacademy.com/public/sample-photos/11.jpeg', 'https://api.slingacademy.com/public/sample-photos/12.jpeg'],
-    description: 'Alfombra suave y confortable.'
+    description: 'Alfombra suave y confortable.',
+    offerDiscount: 10,
   },
   {
     id: '7',
     title: 'Reloj de pared',
     prices: { 'analog': 20.00, 'digital': 25.00 },
     photos: ['https://api.slingacademy.com/public/sample-photos/13.jpeg', 'https://api.slingacademy.com/public/sample-photos/14.jpeg'],
-    description: 'Reloj de pared decorativo.'
+    description: 'Reloj de pared decorativo.',
+    offerDiscount: 10,
   },
   {
     id: '8',
@@ -69,14 +73,16 @@ export const items: Item[] = [
     title: 'Set de cuchillos',
     prices: { 'basic': 35.00, 'professional': 75.00 },
     photos: ['https://api.slingacademy.com/public/sample-photos/20.jpeg', 'https://api.slingacademy.com/public/sample-photos/21.jpeg'],
-    description: 'Set de cuchillos de cocina de alta calidad.'
+    description: 'Set de cuchillos de cocina de alta calidad.',
+    offerDiscount: 10
   },
   {
     id: '11',
     title: 'Taza de cerámica',
     prices: { 'small': 5.00, 'large': 7.00 },
     photos: ['https://api.slingacademy.com/public/sample-photos/22.jpeg', 'https://api.slingacademy.com/public/sample-photos/23.jpeg'],
-    description: 'Taza de cerámica hecha a mano.'
+    description: 'Taza de cerámica hecha a mano.',
+    offerDiscount: 10
   },
   {
     id: '12',
@@ -111,14 +117,16 @@ export const items: Item[] = [
     title: 'Toalla de baño',
     prices: { 'small': 8.00, 'large': 12.00 },
     photos: ['https://api.slingacademy.com/public/sample-photos/32.jpeg', 'https://api.slingacademy.com/public/sample-photos/33.jpeg'],
-    description: 'Toalla de baño de algodón suave.'
+    description: 'Toalla de baño de algodón suave.',
+    offerDiscount: 10
   },
   {
     id: '17',
     title: 'Cortina de ducha',
     prices: { 'standard': 20.00, 'deluxe': 30.00 },
     photos: ['https://api.slingacademy.com/public/sample-photos/34.jpeg', 'https://api.slingacademy.com/public/sample-photos/35.jpeg'],
-    description: 'Cortina de ducha impermeable.'
+    description: 'Cortina de ducha impermeable.',
+    offerDiscount: 10
   },
   {
     id: '18',
@@ -153,7 +161,8 @@ export const items: Item[] = [
     title: 'Cafetera',
     prices: { 'drip': 40.00, 'espresso': 80.00 },
     photos: ['https://api.slingacademy.com/public/sample-photos/45.jpeg', 'https://api.slingacademy.com/public/sample-photos/46.jpeg'],
-    description: 'Cafetera de alta calidad.'
+    description: 'Cafetera de alta calidad.',
+    offerDiscount: 10
   },
   {
     id: '23',
@@ -167,13 +176,15 @@ export const items: Item[] = [
     title: 'Parrilla eléctrica',
     prices: { 'small': 50.00, 'large': 100.00 },
     photos: ['https://api.slingacademy.com/public/sample-photos/49.jpeg', 'https://api.slingacademy.com/public/sample-photos/50.jpeg'],
-    description: 'Parrilla eléctrica para interiores.'
+    description: 'Parrilla eléctrica para interiores.',
+    offerDiscount: 10
   },
   {
     id: '25',
     title: 'Ventilador de piso',
     prices: { 'small': 30.00, 'large': 45.00 },
     photos: ['https://api.slingacademy.com/public/sample-photos/51.jpeg', 'https://api.slingacademy.com/public/sample-photos/52.jpeg'],
-    description: 'Ventilador de piso potente y silencioso.'
+    description: 'Ventilador de piso potente y silencioso.',
+    offerDiscount: 10
   }
 ];

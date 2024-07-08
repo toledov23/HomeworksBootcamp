@@ -4,4 +4,5 @@ export interface Item {
   prices: { [tag: string]: number };
   photos: string[];
   description: string;
+  offerDiscount?: number;
 }
