@@ -1,0 +1,66 @@
+<h2 mat-dialog-title>Crear nuevo producto</h2>
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <div mat-dialog-content>
+  <div>
+    <label for="id">ID</label>
+    <input id="id" formControlName="id" type="text">
+    <div *ngIf="productForm.get('id')?.invalid && productForm.get('id')?.touched">
+      ID es requerido.
+    </div>
+  </div>
+  <div>
+    <label for="title">Título</label>
+    <input id="title" formControlName="title" type="text">
+    <div *ngIf="productForm.get('title')?.invalid && productForm.get('title')?.touched">
+      Título es requerido.
+    </div>
+  </div>
+  <div>
+    <label for="description">Descripción</label>
+    <textarea id="description" formControlName="description"></textarea>
+    <div *ngIf="productForm.get('description')?.invalid && productForm.get('description')?.touched">
+      Descripción es requerida.
+    </div>
+  </div>
+  <div formArrayName="prices">
+    <div *ngFor="let price of prices.controls; let i=index" [formGroupName]="i">
+      <label for="tag">Tag</label>
+      <input id="tag" formControlName="tag" type="text">
+      <div *ngIf="price.get('tag')?.invalid && price.get('tag')?.touched">
+        <div *ngIf="price.get('tag')?.errors?.['required']">Tag es requerido.</div>
+        <div *ngIf="price.get('tag')?.errors?.['pattern']">Tag solo puede contener números y letras.</div>
+        <div *ngIf="price.get('tag')?.errors?.['uniqueTag']">Tag debe ser único.</div>
+      </div>
+      <label for="price">Precio</label>
+      <input id="price" formControlName="price" type="number">
+      <div *ngIf="price.get('price')?.invalid && price.get('price')?.touched">
+        Precio es requerido.
+      </div>
+      <button type="button" (click)="removePrice(i)">Eliminar</button>
+    </div>
+    <button type="button" (click)="addPrice()">Agregar Precio</button>
+    <div *ngIf="prices.errors?.['minLengthArray'] && prices.touched">
+      Debe haber al menos un precio.
+    </div>
+  </div>
+  <div formArrayName="photos">
+    <div *ngFor="let photo of photos.controls; let i=index">
+      <label for="photo">Foto {{ i + 1 }}</label>
+      <input id="photo" [formControlName]="i" type="text">
+      <div *ngIf="photo.invalid && photo.touched">
+        <div *ngIf="photo.errors?.['required']">Foto es requerida.</div>
+        <div *ngIf="photo.errors?.['uniquePhoto']">Foto debe ser única.</div>
+      </div>
+      <button type="button" (click)="removePhoto(i)">Eliminar</button>
+    </div>
+    <button type="button" (click)="addPhoto()">Agregar Foto</button>
+    <div *ngIf="photos.errors?.['minLengthArray'] && photos.touched">
+      Debe haber al menos una foto.
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button type="submit">Guardar</button>
+  <button mat-button type="button" (click)="dialogRef.close()">Cancelar</button>
+</div>
+</form>

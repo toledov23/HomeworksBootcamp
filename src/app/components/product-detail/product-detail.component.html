@@ -1,0 +1,26 @@
+<div *ngIf="product">
+  <mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title><h2>{{ product.title }}</h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-content style="display: flex; justify-content: space-between;">
+      <p>{{ product.description }}</p>
+      <div *ngFor="let photo of product.photos">
+        <img [src]="photo" alt="{{ product.title }}" style="max-width: 100%; margin-inline: 10px;">
+      </div>
+      <div>
+      <h3>Precios:</h3>
+      <ul>
+        <li *ngFor="let tag of getPriceTags(product.prices)">
+          <span [ngStyle]="{'text-decoration': product.offerDiscount ? 'line-through' : 'none'}">
+            {{ tag }}: {{ product.prices[tag] | rounded | currency }}
+          </span>
+          <span *ngIf="product.offerDiscount">
+            ({{ (product.prices[tag] * (1 - product.offerDiscount / 100)) | rounded | currency }})
+          </span>
+        </li>
+      </ul>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

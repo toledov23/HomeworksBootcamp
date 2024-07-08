@@ -1,0 +1,5 @@
+<div class="pagination-container">
+  <button mat-button *ngFor="let page of pages" [class.active]="page === currentPage" (click)="changePage(page)">
+    {{ page }}
+  </button>
+</div>
